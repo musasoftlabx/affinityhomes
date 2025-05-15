@@ -20,7 +20,7 @@ jobs:
           hostname: "http://affinityhomes.co.ke"
           repository_root: "/home/affinity/public_html"
           branch: main
-          cpanel_token: "G1VEDT3WMFRBNUBN3ASAEUQ9Y5RCGCAQ"
+          cpanel_token: "UVWVQMERTFV5OY1E28YI1USKM9MX84RG"
           cpanel_username: "affinity"
       - name: echo deploy-duration
         run: echo "Deployment took ${{ steps.deploy.outputs.duration }} milliseconds"
