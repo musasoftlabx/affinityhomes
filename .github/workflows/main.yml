@@ -21,7 +21,6 @@ jobs:
           repository_root: "/home/affinity/public_html"
           branch: main
           cpanel_token: "G1VEDT3WMFRBNUBN3ASAEUQ9Y5RCGCAQ"
-          cpanel_password: ")C697xZCgBek2@"
           cpanel_username: "affinity"
       - name: echo deploy-duration
         run: echo "Deployment took ${{ steps.deploy.outputs.duration }} milliseconds"
