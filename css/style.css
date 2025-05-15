@@ -11311,6 +11311,7 @@ h5,
   color: rgba(0, 0, 0, 0.4) !important;
 }
 .search-property-1 .form-group .form-control.btn {
+  border-radius: 20px;
   padding: 22px 10px !important;
   font-size: 20px;
   background: #b07032 !important;
@@ -12464,6 +12465,7 @@ textarea.form-control {
   -webkit-transition: all 0.6s ease;
   -ms-transition: all 0.6s ease;
   transition: all 0.6s ease;
+  border-radius: 20px;
 }
 .agent .desc {
   position: relative;
@@ -12473,6 +12475,7 @@ textarea.form-control {
   -webkit-box-shadow: 0px 5px 21px -14px rgba(0, 0, 0, 0.14);
   -moz-box-shadow: 0px 5px 21px -14px rgba(0, 0, 0, 0.14);
   box-shadow: 0px 5px 21px -14px rgba(0, 0, 0, 0.14);
+  text-align: center;
 }
 .agent .desc h3 {
   color: #000000;
