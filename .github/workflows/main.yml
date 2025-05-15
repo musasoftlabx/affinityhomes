@@ -17,7 +17,7 @@ jobs:
         id: deploy
         uses: musasoftlabx/cpanel-deploy-action@v7
         with:
-          hostname: "http://affinityhomes.co.ke"
+          hostname: "https://affinityhomes.co.ke"
           repository_root: "/home/affinity/public_html"
           branch: main
           cpanel_token: "UVWVQMERTFV5OY1E28YI1USKM9MX84RG"
