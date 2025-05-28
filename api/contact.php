@@ -8,7 +8,7 @@
               "Email: $email" . "\r\n" .
               "Subject: $subject" . "\r\n" . "Message: $message";
 
-  if (mail("info@affinityhomes.co.ke", "Customer Message", 'A message from '. $name, $headers)) {
+  if (mail("info@affinityhomes.co.ke", $subject, $message, $headers)) {
     echo "Message sent!";
     header('../');
   } else {
