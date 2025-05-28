@@ -7,7 +7,7 @@
     <head>
       <title>Customer Message</title>
     </head>
-    <body>
+    <body style='background: transparent'>
       <p>".$_POST['message']."</p>
     </body>
     </html>
