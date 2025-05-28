@@ -23,4 +23,5 @@ header('Access-Control-Allow-Headers: *');
 header('Access-Control-Allow-Methods: *');
 date_default_timezone_set('Africa/Nairobi'); # Set the default timezone
 error_reporting(E_ALL); # Enable error reporting for all errors. This should only be in development
+
 ini_set('display_errors', 1); # Set the php config file to display errors
