@@ -980,7 +980,8 @@
         <div class="row block-9 justify-content-center mb-5">
           <div class="col-md-6 align-items-stretch d-flex">
             <form
-              action="#"
+              action="api/contact.php"
+              method="post"
               class="bg-light p-5 contact-form"
               style="background: #f9f3ed !important"
             >
@@ -989,6 +990,9 @@
                   type="text"
                   class="form-control"
                   placeholder="Your Name"
+                  name="name"
+                  id="name-field"
+                  required=""
                 />
               </div>
               <div class="form-group">
@@ -996,10 +1000,19 @@
                   type="text"
                   class="form-control"
                   placeholder="Your Email"
+                  name="email"
+                  id="email-field"
+                  required=""
                 />
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject" />
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  placeholder="Subject" 
+                  name="subject"
+                  id="subject-field"
+                  required=""/>
               </div>
               <div class="form-group">
                 <textarea
@@ -1009,6 +1022,9 @@
                   rows="7"
                   class="form-control"
                   placeholder="Message"
+                  name="message"
+                  id="message-field"
+                  required=""
                 ></textarea>
               </div>
               <div class="form-group">
