@@ -10,7 +10,7 @@
 
   if (mail("info@affinityhomes.co.ke", $subject, $message, $headers)) {
     echo "Message sent!";
-    header('Location: ../');
+    header('Location: ../index.php#contact');
   } else {
     echo "Message was not sent!";
   }
