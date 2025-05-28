@@ -247,6 +247,8 @@
               $size = $property['size'];
               $type = $property['type'];
               $photo = $property['photo'];
+              $sales_cost = $property['sales_cost'];
+              $rent_cost = $property['rent_cost'];
 
               ?>
                 <div class="col-md-4">
@@ -283,17 +285,17 @@
                         <?php
                           if ($type === 'Sale') {
                             ?>
-                              <span class="orig-price">Kes 46,000,000</span>
+                              <span class="orig-price">Kes <?=number_format($sales_cost);?></span>
                             <?php
                           } else if ($type === 'Rent') {
                             ?>
-                              <span class="orig-price">Kes 450,000<small>/month</small></span>
+                              <span class="orig-price">Kes <?=number_format($rent_cost);?><small>/month</small></span>
                             <?php
                           } else {
                             ?>
-                              <span class="orig-price">Sale: Kes 46,000,000</span>
+                              <span class="orig-price">Sale: Kes <?=number_format($sales_cost);?></span>
                               <br />
-                              <span class="orig-price">Rent: Kes 450,000<small>/month</small></span>
+                              <span class="orig-price">Rent: Kes <?=number_format($rent_cost);?><small>/month</small></span>
                             <?php
                           }
                         ?>
