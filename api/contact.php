@@ -4,13 +4,17 @@
   $subject = $_POST['subject'];
   $message = $_POST['message'];
 
-  $headers = "From : $name" . "\r\n" .
-              "Email: $email" . "\r\n" .
-              "Subject: $subject" . "\r\n" . "Message: $message";
+  // To send HTML mail, the Content-type header must be set
+  $headers[] = 'MIME-Version: 1.0';
+  $headers[] = 'Content-type: text/html; charset=iso-8859-1';
+
+  // Additional headers
+  $headers[] = 'To: Mary <mary@example.com>, Kelly <kelly@example.com>';
+  $headers[] = 'From: $name $email';
 
   if (mail("info@affinityhomes.co.ke", $subject, $message, $headers)) {
     echo "Message sent!";
-    header('Location: ../index.php#contact');
+    header('Location: ../#contact');
   } else {
     echo "Message was not sent!";
   }
