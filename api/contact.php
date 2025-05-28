@@ -18,8 +18,8 @@
   $headers[] = 'Content-type: text/html; charset=iso-8859-1';
 
   // Additional headers
-  $headers[] = 'To: Affinity Homes info@affinityhomes.co.ke';
-  $headers[] = 'From: '.$name.' '.$email;
+  $headers[] = 'To: Affinity Homes <info@affinityhomes.co.ke>';
+  $headers[] = 'From: '.$name.' <'.$email.'>';
 
   if (mail("info@affinityhomes.co.ke", $subject, $message, implode("\r\n", $headers))) {
     echo "Message sent!";
