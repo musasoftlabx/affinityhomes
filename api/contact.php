@@ -12,7 +12,7 @@
   $headers[] = 'To: Affinity Homes info@affinityhomes.co.ke';
   $headers[] = 'From: '.$name.' '.$email;
 
-  if (mail("info@affinityhomes.co.ke", $subject, $message, $headers)) {
+  if (mail("info@affinityhomes.co.ke", $subject, $message, implode("\r\n", $headers))) {
     echo "Message sent!";
     header('Location: ../index.php#contact');
   } else {
