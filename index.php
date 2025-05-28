@@ -239,7 +239,7 @@
         </div>
         <div class="row">
           <?php
-            $properties = ChainPDO("SELECT * FROM properties ORDER BY priority")->fetchAll();
+            $properties = ChainPDO("SELECT * FROM properties WHERE visible = 1 ORDER BY priority")->fetchAll();
 
             foreach ($properties as $property) {
               $title = $property['title'];
