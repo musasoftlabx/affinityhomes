@@ -34,6 +34,8 @@
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="css/styles-2.css" />
+
+    <link rel="stylesheet" href="css/glightbox.min.css" />
   </head>
   <body>
     <nav
@@ -242,6 +244,7 @@
             $properties = ChainPDO("SELECT * FROM properties WHERE visible = 1 ORDER BY priority")->fetchAll();
 
             foreach ($properties as $property) {
+              $id = $property['id'];
               $title = $property['title'];
               $location = $property['location'];
               $size = $property['size'];
@@ -254,9 +257,17 @@
                 <div class="col-md-4">
                   <div class="property-wrap ftco-animate">
                     <div
-                      class="img d-flex align-items-center justify-content-center"
+                      class="img d-flex align-items-center justify-content-center glightbox"
                       style="background-image: url(<?=$photo;?>)"
                     >
+                      <a
+                        href="<?=$photo;?>"
+                        title="<?=$title;?>"
+                        data-gallery="<?=$id;?>"
+                        class="glightbox preview-link icon d-flex align-items-center justify-content-center btn-custom"
+                      >
+                        <span class="ion-ios-link"></span>
+                      </a>
                       <div class="list-agent d-flex align-items-center">
                         <a
                           href="#properties"
@@ -269,7 +280,8 @@
                           <h3 class="mb-0 ml-2">Gladys</h3>
                         </a>
                       </div>
-                    </div>
+                    </div>  
+
                     <div class="text">
                       <div class="btn btn-primary py-1 px-2 mb-2" style="border-radius: 10px">For <?=$type;?></div>
 
@@ -1238,6 +1250,10 @@
     <script src="js/jquery.timepicker.min.js"></script>
     <script src="js/scrollax.min.js"></script>
     <script src="js/google-map.js"></script>
+    <script src="js/glightbox.min.js"></script>
     <script src="js/main.js"></script>
+    <script type="application/javascript">
+      GLightbox({ selector: ".glightbox" });
+    </script>
   </body>
 </html>
