@@ -3,8 +3,8 @@ define('DOCUMENT_ROOT', dirname(dirname(dirname(__FILE__))) . '/');
 define('APPROOT', dirname(__FILE__));
 define('API_ROOT', dirname(dirname(__FILE__)) . '/');
 
-define('DATABASE_HOST', 'localhost');
-define('DATABASE_USERNAME', 'affinity-homes-dba');
+define('DATABASE_HOST', 'affinityhomes.co.ke');
+define('DATABASE_USERNAME', 'affinity_homes_dba');
 define('DATABASE_PASSWORD', '@AffinityHomes#');
 define('DATABASE_NAME', 'affinity_homes_db');
 
