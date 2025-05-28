@@ -10,11 +10,11 @@
 
   // Additional headers
   $headers[] = 'To: Mary <mary@example.com>, Kelly <kelly@example.com>';
-  $headers[] = 'From: $name $email';
+  $headers[] = 'From: '.$name.' '.$email;
 
   if (mail("info@affinityhomes.co.ke", $subject, $message, $headers)) {
     echo "Message sent!";
-    header('Location: ../#contact');
+    header('Location: ../index.php#contact');
   } else {
     echo "Message was not sent!";
   }
