@@ -1,3 +1,5 @@
+<?php require 'api/functions.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,6 +14,8 @@
       href="https://fonts.googleapis.com/css?family=Jost:300,400,500,700&family=Allison;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
     <link rel="stylesheet" href="css/animate.css" />
@@ -118,7 +122,7 @@
       </div>
     </div>
 
-    <section class="ftco-section ftco-no-pb">
+    <!-- <section class="ftco-section ftco-no-pb">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -187,20 +191,20 @@
                             <span class="ion-ios-arrow-down"></span>
                           </div>
                           <select name="" id="" class="form-control">
-                            <option value="">$5,000</option>
-                            <option value="">$10,000</option>
-                            <option value="">$50,000</option>
-                            <option value="">$100,000</option>
-                            <option value="">$200,000</option>
-                            <option value="">$300,000</option>
-                            <option value="">$400,000</option>
-                            <option value="">$500,000</option>
-                            <option value="">$600,000</option>
-                            <option value="">$700,000</option>
-                            <option value="">$800,000</option>
-                            <option value="">$900,000</option>
-                            <option value="">$1,000,000</option>
-                            <option value="">$2,000,000</option>
+                            <option value="">Kes 5,000</option>
+                            <option value="">Kes 10,000</option>
+                            <option value="">Kes 50,000</option>
+                            <option value="">Kes 100,000</option>
+                            <option value="">Kes 200,000</option>
+                            <option value="">Kes 300,000</option>
+                            <option value="">Kes 400,000</option>
+                            <option value="">Kes 500,000</option>
+                            <option value="">Kes 600,000</option>
+                            <option value="">Kes 700,000</option>
+                            <option value="">Kes 800,000</option>
+                            <option value="">Kes 900,000</option>
+                            <option value="">Kes 1,000,000</option>
+                            <option value="">Kes 2,000,000</option>
                           </select>
                         </div>
                       </div>
@@ -223,226 +227,103 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section id="properties" class="ftco-section goto-here ftco-no-pb">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-12 heading-section text-center ftco-animate mb-5">
-            <span class="subheading">What we offer</span>
-            <h2 class="mb-2">Exclusive Offers For You</h2>
+            <span class="subheading">Our Properties</span>
+            <h2 class="mb-2">Exclusive Properties Just For You</h2>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4">
-            <div class="property-wrap ftco-animate">
-              <div
-                class="img d-flex align-items-center justify-content-center"
-                style="background-image: url(images/listing-1.jpg)"
-              >
-                <a
-                  href="#properties"
-                  class="icon d-flex align-items-center justify-content-center btn-custom"
-                >
-                  <span class="ion-ios-link"></span>
-                </a>
-                <div class="list-agent d-flex align-items-center">
-                  <a
-                    href="#properties"
-                    class="agent-info d-flex align-items-center"
-                  >
-                    <div
-                      class="img-2 rounded-circle"
-                      style="background-image: url(images/gladys.jpg)"
-                    ></div>
-                    <h3 class="mb-0 ml-2">Gladys</h3>
-                  </a>
-                  <div class="tooltip-wrap d-flex">
-                    <a
-                      href="#properties"
-                      class="icon-2 d-flex align-items-center justify-content-center"
-                      data-toggle="tooltip"
-                      data-placement="top"
-                      title="Bookmark"
-                    >
-                      <span class="ion-ios-heart"
-                        ><i class="sr-only">Bookmark</i></span
-                      >
-                    </a>
-                    <a
-                      href="#properties"
-                      class="icon-2 d-flex align-items-center justify-content-center"
-                      data-toggle="tooltip"
-                      data-placement="top"
-                      title="Compare"
-                    >
-                      <span class="ion-ios-eye"
-                        ><i class="sr-only">Compare</i></span
-                      >
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="text">
-                <p class="price mb-3">
-                  <span class="old-price">Kes 7,000</span
-                  ><span class="orig-price">Kes 5,000<small>/day</small></span>
-                </p>
-                <h3 class="mb-0">
-                  <a href="#properties">Meridian Homes</a>
-                </h3>
-                <span class="location d-inline-block mb-3"
-                  ><i class="ion-ios-pin mr-2"></i>Apartment in Kilimani,
-                  Nairobi</span
-                >
-                <ul class="property_list">
-                  <li><span class="flaticon-bed"></span>2</li>
-                  <li><span class="flaticon-bathtub"></span>1</li>
-                  <li><span class="flaticon-floor-plan"></span>1,878 sqft</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <?php
+            $properties = ChainPDO("SELECT * FROM properties ORDER BY priority")->fetchAll();
 
-          <div class="col-md-4">
-            <div class="property-wrap ftco-animate">
-              <div
-                class="img d-flex align-items-center justify-content-center"
-                style="background-image: url(images/listing-2.jpg)"
-              >
-                <a
-                  href="#properties"
-                  class="icon d-flex align-items-center justify-content-center btn-custom"
-                >
-                  <span class="ion-ios-link"></span>
-                </a>
-                <div class="list-agent d-flex align-items-center">
-                  <a
-                    href="#properties"
-                    class="agent-info d-flex align-items-center"
-                  >
-                    <div
-                      class="img-2 rounded-circle"
-                      style="background-image: url(images/gladys.jpg)"
-                    ></div>
-                    <h3 class="mb-0 ml-2">Gladys</h3>
-                  </a>
-                  <div class="tooltip-wrap d-flex">
-                    <a
-                      href="#properties"
-                      class="icon-2 d-flex align-items-center justify-content-center"
-                      data-toggle="tooltip"
-                      data-placement="top"
-                      title="Bookmark"
-                    >
-                      <span class="ion-ios-heart"
-                        ><i class="sr-only">Bookmark</i></span
-                      >
-                    </a>
-                    <a
-                      href="#properties"
-                      class="icon-2 d-flex align-items-center justify-content-center"
-                      data-toggle="tooltip"
-                      data-placement="top"
-                      title="Compare"
-                    >
-                      <span class="ion-ios-eye"
-                        ><i class="sr-only">Compare</i></span
-                      >
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="text">
-                <p class="price mb-3">
-                  <span class="old-price">Kes 25,000</span
-                  ><span class="orig-price">Kes 20,000<small>/day</small></span>
-                </p>
-                <h3 class="mb-0">
-                  <a href="#properties">Amazing Condo</a>
-                </h3>
-                <span class="location d-inline-block mb-3"
-                  ><i class="ion-ios-pin mr-2"></i>Apartment in The Curve,
-                  Nairobi</span
-                >
-                <ul class="property_list">
-                  <li><span class="flaticon-bed"></span>3</li>
-                  <li><span class="flaticon-bathtub"></span>2</li>
-                  <li><span class="flaticon-floor-plan"></span>3,000 sqft</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+            foreach ($properties as $property) {
+              $title = $property['title'];
+              $location = $property['location'];
+              $size = $property['size'];
+              $type = $property['type'];
+              $photo = $property['photo'];
 
-          <div class="col-md-4">
-            <div class="property-wrap ftco-animate">
-              <div
-                class="img d-flex align-items-center justify-content-center"
-                style="background-image: url(images/listing-3.jpg)"
-              >
-                <a
-                  href="#properties"
-                  class="icon d-flex align-items-center justify-content-center btn-custom"
-                >
-                  <span class="ion-ios-link"></span>
-                </a>
-                <div class="list-agent d-flex align-items-center">
-                  <a
-                    href="#properties"
-                    class="agent-info d-flex align-items-center"
-                  >
+              ?>
+                <div class="col-md-4">
+                  <div class="property-wrap ftco-animate">
                     <div
-                      class="img-2 rounded-circle"
-                      style="background-image: url(images/gladys.jpg)"
-                    ></div>
-                    <h3 class="mb-0 ml-2">Gladys</h3>
-                  </a>
-                  <div class="tooltip-wrap d-flex">
-                    <a
-                      href="#properties"
-                      class="icon-2 d-flex align-items-center justify-content-center"
-                      data-toggle="tooltip"
-                      data-placement="top"
-                      title="Bookmark"
+                      class="img d-flex align-items-center justify-content-center"
+                      style="background-image: url(<?=$photo;?>)"
                     >
-                      <span class="ion-ios-heart"
-                        ><i class="sr-only">Bookmark</i></span
+                      <div class="list-agent d-flex align-items-center">
+                        <a
+                          href="#properties"
+                          class="agent-info d-flex align-items-center"
+                        >
+                          <div
+                            class="img-2 rounded-circle"
+                            style="background-image: url(images/gladys.jpg)"
+                          ></div>
+                          <h3 class="mb-0 ml-2">Gladys</h3>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="text">
+                      <div class="btn btn-primary py-1 px-2 mb-2" style="border-radius: 10px"><?=$type;?></div>
+
+                      <h3 class="mb-0">
+                        <a href="#properties"
+                          ><?=$title;?></a
+                        >
+                      </h3>
+
+                      <p class="price mb-2 mt-2">
+                        <!-- <span class="old-price">Sale: Kes 46,000,000</span
+                        > -->
+                        <?php
+                          if ($type === 'Sale') {
+                            ?>
+                              <span class="orig-price">Kes 46,000,000</span>
+                            <?php
+                          } else if ($type === 'Rent') {
+                            ?>
+                              <span class="orig-price">Kes 450,000<small>/month</small></span>
+                            <?php
+                          } else {
+                            ?>
+                              <span class="orig-price">Sale: Kes 46,000,000</span>
+                              <br />
+                              <span class="orig-price">Rent: Kes 450,000<small>/month</small></span>
+                            <?php
+                          }
+                        ?>
+                      </p>
+
+                      <span class="location d-inline-block mb-3"
+                        ><i class="ion-ios-pin mr-2"></i><?=$location;?></span
                       >
-                    </a>
-                    <a
-                      href="#properties"
-                      class="icon-2 d-flex align-items-center justify-content-center"
-                      data-toggle="tooltip"
-                      data-placement="top"
-                      title="Compare"
-                    >
-                      <span class="ion-ios-eye"
-                        ><i class="sr-only">Compare</i></span
-                      >
-                    </a>
+                      <ul class="property_list">
+                        <!-- <li><span class="flaticon-bed"></span>2</li>
+                        <li><span class="flaticon-bathtub"></span>1</li> -->
+                        <?php
+                          if ($size) {
+                            ?>
+                              <li><span class="flaticon-floor-plan"></span><?=$size;?></li>
+                            <?php
+                          }
+                        ?>
+                      </ul>
+
+                      <div class="d-flex justify-content-end">
+                        <a href="#contact" class="btn btn-primary py-2 px-3" style="border-radius: 10px; background: transparent !important; color: #b07032 !important">Enquire <span class="fa fa-external-link"></span></a>
+                      </div>
+
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="text">
-                <p class="price mb-3">
-                  <span class="old-price">Kes 9,000</span
-                  ><span class="orig-price">Kes 8,500<small>/day</small></span>
-                </p>
-                <h3 class="mb-0">
-                  <a href="#properties">Cozy Homes </a>
-                </h3>
-                <span class="location d-inline-block mb-3"
-                  ><i class="ion-ios-pin mr-2"></i>Apartment in Kileleshwa,
-                  Nairobi</span
-                >
-                <ul class="property_list">
-                  <li><span class="flaticon-bed"></span>1</li>
-                  <li><span class="flaticon-bathtub"></span>1</li>
-                  <li><span class="flaticon-floor-plan"></span>2,500 sqft</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+              <?php
+            }
+          ?>
         </div>
       </div>
     </section>
