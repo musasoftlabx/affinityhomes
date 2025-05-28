@@ -2,7 +2,16 @@
   $name = $_POST['name'];
   $email = $_POST['email'];
   $subject = $_POST['subject'];
-  $message = $_POST['message'];
+  $message = "
+    <html>
+    <head>
+      <title>Customer Message</title>
+    </head>
+    <body>
+      <p>".$_POST['message']."</p>
+    </body>
+    </html>
+  ";
 
   // To send HTML mail, the Content-type header must be set
   $headers[] = 'MIME-Version: 1.0';
