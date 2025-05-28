@@ -271,7 +271,7 @@
                       </div>
                     </div>
                     <div class="text">
-                      <div class="btn btn-primary py-1 px-2 mb-2" style="border-radius: 10px"><?=$type;?></div>
+                      <div class="btn btn-primary py-1 px-2 mb-2" style="border-radius: 10px">For <?=$type;?></div>
 
                       <h3 class="mb-0">
                         <a href="#properties"
