@@ -122,7 +122,7 @@
       </div>
     </div>
 
-    <!-- <section class="ftco-section ftco-no-pb">
+    <section class="ftco-section ftco-no-pb">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -227,7 +227,7 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
     <section id="properties" class="ftco-section goto-here ftco-no-pb">
       <div class="container">
