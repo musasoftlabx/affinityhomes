@@ -362,7 +362,7 @@
         <div class="row d-md-flex text-wrapper align-items-stretch">
           <div
             class="one-half mb-md-0 mb-4 img d-flex align-self-stretch"
-            style="background-image: url(images/model.jpg)"
+            style="background-image: url(images/about_1.jpg)"
           ></div>
           <div
             class="one-half half-text d-flex justify-content-end align-items-center"
