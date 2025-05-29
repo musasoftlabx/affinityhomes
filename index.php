@@ -10,6 +10,12 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
+    <!-- Favicons -->
+    <link rel="icon" href="images/favicons/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+
     <link
       href="https://fonts.googleapis.com/css?family=Jost:300,400,500,700&family=Allison;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
@@ -356,7 +362,7 @@
         <div class="row d-md-flex text-wrapper align-items-stretch">
           <div
             class="one-half mb-md-0 mb-4 img d-flex align-self-stretch"
-            style="background-image: url('images/about.jpg')"
+            style="background-image: url(images/model.jpg)"
           ></div>
           <div
             class="one-half half-text d-flex justify-content-end align-items-center"
