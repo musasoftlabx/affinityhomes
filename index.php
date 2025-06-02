@@ -714,9 +714,8 @@
                 <div class="testimony-wrap py-4">
                   <div class="text">
                     <p class="mb-4">
-                      Gladys was very responsive to all my questions and his
-                      place was exactly as described. I loved my stay and I will
-                      surely be back.
+                      Gladys was very responsive to all my questions and her
+                      place was exactly as described. I loved investing in the 1 bedroom apartment at The Curve.
                     </p>
                     <div class="d-flex align-items-center">
                       <div
