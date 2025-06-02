@@ -1055,7 +1055,7 @@
           <div class="col-md-6 align-items-stretch d-flex">
             <div id="map" class="bg-white border">
               <iframe
-                src="https://www.google.com/maps/embed/v1/place?q=PQ88+MF2+Nairobi&key=AIzaSyAXqYhZ_PR6d8FJtLt1Fsn3SqmbHVm23_w"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1614.6568216514063!2d36.766678406242136!3d-1.283375130327257!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xfb369318e22d9241!2sPQ88%2BMF2%2C%20Nairobi%2C%20Kenya!5e1!3m2!1sen!2sus!4v1748907123307!5m2!1sen!2sus"
                 frameborder="0"
                 style="border: 0; width: 100%; height: 100%"
                 allowfullscreen=""
