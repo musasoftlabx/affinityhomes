@@ -1055,7 +1055,7 @@
           <div class="col-md-6 align-items-stretch d-flex">
             <div id="map" class="bg-white border">
               <iframe
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAXqYhZ_PR6d8FJtLt1Fsn3SqmbHVm23_w&q=37+on+Kikambala"
+                src="https://www.google.com/maps/embed/v1/place?q=PQ88+MF2+Nairobi&key=AIzaSyAXqYhZ_PR6d8FJtLt1Fsn3SqmbHVm23_w"
                 frameborder="0"
                 style="border: 0; width: 100%; height: 100%"
                 allowfullscreen=""
