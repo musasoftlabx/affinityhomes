@@ -377,7 +377,7 @@
                             foreach($gallery as $key => $image) {
                               $key++;
                               ?>
-                                <div class="avatar" onclick='openLightBox(<?=json_encode($images);?>, <?=$key--;?>);'>
+                                <div class="avatar" onclick='openLightBox(<?=json_encode($images);?>, <?=$key;?>);'>
                                   <span class="avatar-name">Image <?=$key;?></span>
                                   <img src="<?=$image;?>" alt="Image">
                                 </div>
