@@ -39,7 +39,7 @@
 
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/icomoon.css" />
-    <link rel="stylesheet" href="css/styles-3.css" />
+    <link rel="stylesheet" href="css/styles-4.css" />
 
     <link rel="stylesheet" href="css/glightbox.min.css" />
   </head>
