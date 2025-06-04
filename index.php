@@ -377,7 +377,7 @@
                             foreach($gallery as $key => $image) {
                               $key++;
                               ?>
-                                <div class="avatar" onclick='openLightBox(<?=json_encode($images);?>);'>
+                                <div class="avatar" onclick='openLightBox(<?=json_encode($images);?>, <?=$key--;?>);'>
                                   <span class="avatar-name">Image <?=$key;?></span>
                                   <img src="<?=$image;?>" alt="Image">
                                 </div>
@@ -1313,9 +1313,11 @@
     <script src="js/glightbox.min.js"></script>
     <script src="js/main.js"></script>
     <script type="application/javascript">
-      const lightbox = GLightbox({...options});
-      function openLightBox(elements, slide) { 
-        lightbox.setElements(elements).goToSlide(4) 
+      const lightbox = GLightbox({ elements: [] });
+      function openLightBox(elements, slide = 0) {
+        lightbox.setElements(elements);
+        lightbox.goToSlide(slide);
+        lightbox.open();
       }
     </script>
   </body>
