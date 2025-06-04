@@ -1314,9 +1314,9 @@
     <script src="js/main.js"></script>
     <script type="application/javascript">
       const lightbox = GLightbox({ elements: [] });
-      function openLightBox(elements, slide = 0) {
+      function openLightBox(elements, slide) {
         lightbox.setElements(elements);
-        lightbox.goToSlide(slide);
+        lightbox.startAt(slide ?? 0);
         lightbox.open();
       }
     </script>
