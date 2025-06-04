@@ -372,12 +372,12 @@
                       </ul>
 
                       <div class="d-flex align-content-center">
-                        <div class="avatar-group" onclick='GLightbox({ elements: <?=json_encode($images);?> }).open();'>
+                        <div class="avatar-group">
                           <?php
                             foreach($gallery as $key => $image) {
                               $key++;
                               ?>
-                                <div class="avatar">
+                                <div class="avatar" onclick='GLightbox({ elements: <?=json_encode($images);?> }).open().goToSlide(3)'>
                                   <span class="avatar-name">Image <?=$key;?></span>
                                   <img src="<?=$image;?>" alt="Image">
                                 </div>
