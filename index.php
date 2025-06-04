@@ -375,9 +375,10 @@
                         <div class="avatar-group">
                           <?php
                             foreach($gallery as $key => $image) {
+                              $imageKey = $key++
                               ?>
                                 <div class="avatar" onclick='openLightBox(<?=json_encode($images);?>, <?=$key;?>);'>
-                                  <span class="avatar-name">Image <?=$key++;?></span>
+                                  <span class="avatar-name">Image <?=$imageKey;?></span>
                                   <img src="<?=$image;?>" alt="Image">
                                 </div>
                               <?php
