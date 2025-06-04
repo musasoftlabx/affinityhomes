@@ -39,7 +39,7 @@
 
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/icomoon.css" />
-    <link rel="stylesheet" href="css/styles-2.css" />
+    <link rel="stylesheet" href="css/styles-3.css" />
 
     <link rel="stylesheet" href="css/glightbox.min.css" />
   </head>
@@ -256,34 +256,71 @@
               $size = $property['size'];
               $type = $property['type'];
               $photo = $property['photo'];
+              $gallery = $property['gallery'] ? json_decode($property['gallery']) : [];
               $sales_cost = $property['sales_cost'];
               $rental_cost = $property['rental_cost'];
+
+              $images = [];
+
+              foreach($gallery as $image) {
+                array_push($images, ['href' => $image, 'type' => 'image']);
+              }
 
               ?>
                 <div class="col-md-4">
                   <div class="property-wrap ftco-animate">
                     <div
-                      class="img d-flex align-items-center justify-content-center glightbox"
+                      class="img d-flex align-items-center justify-content-center"
                       style="background-image: url(<?=$photo;?>)"
                     >
-                      <a
-                        href="<?=$photo;?>"
+                      <?php
+                        if ($type === 'Sale') {
+                          ?>
+                            <div class="ribbon ribbon-top-right"><span>ON SALE</span></div>
+                          <?php
+                        }
+                      ?>
+
+                      <!-- <div class="box">
+                      <span class="wdp-ribbon wdp-ribbon-two">Sale</span>
+                      </div>
+
+                      <div class="box">
+                      <span class="wdp-ribbon wdp-ribbon-three">Sale</span>
+                      </div>
+
+                      <div class="box">
+                        <span class="wdp-ribbon wdp-ribbon-four">Sale</span>
+                      </div>
+
+                      <div class="box">
+                      <span class="wdp-ribbon wdp-ribbon-five">Sale</span>
+                      </div>
+
+                      <div class="box">
+                        <span class="wdp-ribbon wdp-ribbon-six"><span class="wdp-ribbon-inner-wrap"><span class="wdp-ribbon-border"></span><span class="wdp-ribbon-text">Sale</span></span>
+                      </div> -->
+
+                      <div
+                        id="openLB_"
+                        href="##"
                         title="<?=$title;?>"
                         data-gallery="<?=$id;?>"
                         class="glightbox preview-link icon d-flex align-items-center justify-content-center btn-custom"
+                        onclick='GLightbox({ elements: <?=json_encode($images);?> }).open();'
                       >
-                        <span class="ion-ios-link"></span>
-                      </a>
+                        <span class="ion-ios-images"></span>
+                      </div>
                       <div class="list-agent d-flex align-items-center">
                         <a
-                          href="#properties"
+                          href="#agents"
                           class="agent-info d-flex align-items-center"
                         >
                           <div
                             class="img-2 rounded-circle"
                             style="background-image: url(images/gladys.jpg)"
                           ></div>
-                          <h3 class="mb-0 ml-2">Gladys</h3>
+                          <h3 class="mb-0 ml-2">Key Agent</h3><br/>
                         </a>
                       </div>
                     </div>  
@@ -334,8 +371,26 @@
                         ?>
                       </ul>
 
-                      <div class="d-flex justify-content-end">
-                        <a href="#contact" class="btn btn-primary py-2 px-3" style="border-radius: 10px; background: transparent !important; color: #b07032 !important">Enquire <span class="fa fa-external-link"></span></a>
+                      <div class="d-flex align-content-center">
+                        <div class="avatar-group" onclick='GLightbox({ elements: <?=json_encode($images);?> }).open();'>
+                          <?php
+                            foreach($gallery as $key => $image) {
+                              $key++;
+                              ?>
+                                <div class="avatar">
+                                  <span class="avatar-name">Image <?=$key;?></span>
+                                  <img src="<?=$image;?>" alt="Image">
+                                </div>
+                              <?php
+                            }
+                          ?>
+                        </div>
+
+                        <div style="flex: 1"></div>
+
+                        <div class="align-content-center justify-content-end">
+                          <a href="#contact" class="btn btn-primary py-2 px-3" style="border-radius: 10px; background: transparent !important; color: #b07032 !important">Enquire <span class="fa fa-external-link"></span></a>
+                        </div>
                       </div>
 
                     </div>
@@ -1258,7 +1313,7 @@
     <script src="js/glightbox.min.js"></script>
     <script src="js/main.js"></script>
     <script type="application/javascript">
-      GLightbox({ selector: ".glightbox" });
+      function openLightBox(elements) { GLightbox({ elements }).open(); }
     </script>
   </body>
 </html>
