@@ -326,7 +326,7 @@
                     </div>  
 
                     <div class="text">
-                      <div class="btn btn-primary py-1 px-2 mb-2" style="border-radius: 10px">For <?=$type;?></div>
+                      <div class="btn btn-primary px-2 mb-3" style="border-radius: 10px">For <?=$type;?></div>
 
                       <h3 class="mb-0">
                         <a href="#properties"
@@ -340,17 +340,17 @@
                         <?php
                           if ($type === 'Sale') {
                             ?>
-                              <span class="orig-price">Kes <?=number_format($sales_cost);?></span>
+                              <span class="sale-price">Kes <?=number_format($sales_cost);?></span>
                             <?php
                           } else if ($type === 'Rent') {
                             ?>
-                              <span class="orig-price">Kes <?=number_format($rental_cost);?><small>/month</small></span>
+                              <span class="rent-price">Kes <?=number_format($rental_cost);?><small>/month</small></span>
                             <?php
                           } else {
                             ?>
-                              <span class="orig-price">Sale: Kes <?=number_format($sales_cost);?></span>
+                              <span class="sale-price">Sale: Kes <?=number_format($sales_cost);?></span>
                               <br />
-                              <span class="orig-price">Rent: Kes <?=number_format($rental_cost);?><small>/month</small></span>
+                              <span class="rent-price">Rent: Kes <?=number_format($rental_cost);?>&nbsp;<small><b>per month</b></small></span>
                             <?php
                           }
                         ?>

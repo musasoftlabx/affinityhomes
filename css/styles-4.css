@@ -11462,6 +11462,12 @@ h5,
 .property-wrap .text p.price span.orig-price {
   color: #b07032;
 }
+.property-wrap .text p.price span.sale-price {
+  color: #89840b;
+}
+.property-wrap .text p.price span.rent-price {
+  color: #b07032;
+}
 .property-wrap .text p.price span.old-price {
   color: rgba(0, 0, 0, 0.2);
   position: relative;
