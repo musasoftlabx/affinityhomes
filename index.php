@@ -326,7 +326,7 @@
                     </div>  
 
                     <div class="text">
-                      <div class="btn btn-primary px-2 mb-3" style="border-radius: 10px">For <?=$type;?></div>
+                      <div class="btn btn-primary px-2 mb-3" style="border: 5px double #fff !important; border-radius: 10px">For <?=$type;?></div>
 
                       <h3 class="mb-0">
                         <a href="#properties"
