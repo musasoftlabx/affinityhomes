@@ -307,7 +307,7 @@
                         title="<?=$title;?>"
                         data-gallery="<?=$id;?>"
                         class="glightbox preview-link icon d-flex align-items-center justify-content-center btn-custom"
-                        onclick='GLightbox({ elements: <?=json_encode($images);?> }).open();'
+                        onclick='openLightBox(<?=json_encode($images);?>);'
                       >
                         <span class="ion-ios-images"></span>
                       </div>
@@ -377,7 +377,7 @@
                             foreach($gallery as $key => $image) {
                               $key++;
                               ?>
-                                <div class="avatar" onclick='GLightbox({ elements: <?=json_encode($images);?> }).goToSlide($key--).open()'>
+                                <div class="avatar" onclick='openLightBox(<?=json_encode($images);?>);'>
                                   <span class="avatar-name">Image <?=$key;?></span>
                                   <img src="<?=$image;?>" alt="Image">
                                 </div>
@@ -1313,7 +1313,10 @@
     <script src="js/glightbox.min.js"></script>
     <script src="js/main.js"></script>
     <script type="application/javascript">
-      function openLightBox(elements) { GLightbox({ elements }).open(); }
+      const lightbox = GLightbox();
+      function openLightBox(elements, slide) { 
+        lightbox.setElements(elements).goToSlide(4) 
+      }
     </script>
   </body>
 </html>
