@@ -13246,8 +13246,8 @@ textarea.form-control {
   top: 15px;
   transform: rotate(-45deg);
   color: #fff;
-  padding-top: 10px;
   padding-left: 55px;
+  border: 2px double #fff;
 }
 
 /* top right*/
@@ -13273,8 +13273,8 @@ textarea.form-control {
   top: 10px;
   transform: rotate(45deg);
   color: #fff;
-  padding-top: 10px;
   padding-left: 55px;
+  border: 2px double #fff;
 }
 
 .wdp-ribbon {
