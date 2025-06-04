@@ -1316,8 +1316,7 @@
       const lightbox = GLightbox({ elements: [] });
       function openLightBox(elements, slide) {
         lightbox.setElements(elements);
-        lightbox.startAt(slide ?? 0);
-        lightbox.open();
+        lightbox.openAt(slide ?? 0);
       }
     </script>
   </body>
