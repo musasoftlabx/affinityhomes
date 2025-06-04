@@ -1313,7 +1313,7 @@
     <script src="js/glightbox.min.js"></script>
     <script src="js/main.js"></script>
     <script type="application/javascript">
-      const lightbox = GLightbox();
+      const lightbox = GLightbox({...options});
       function openLightBox(elements, slide) { 
         lightbox.setElements(elements).goToSlide(4) 
       }
