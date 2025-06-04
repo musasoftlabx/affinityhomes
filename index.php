@@ -377,7 +377,7 @@
                             foreach($gallery as $key => $image) {
                               $key++;
                               ?>
-                                <div class="avatar" onclick='GLightbox({ elements: <?=json_encode($images);?> }).open().goToSlide(3)'>
+                                <div class="avatar" onclick='GLightbox({ elements: <?=json_encode($images);?> }).goToSlide($key--).open()'>
                                   <span class="avatar-name">Image <?=$key;?></span>
                                   <img src="<?=$image;?>" alt="Image">
                                 </div>
