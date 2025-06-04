@@ -113,7 +113,7 @@
                 >
               </h1>
               <p>
-                <a href="#" class="btn btn-primary py-3 px-4"
+                <a href="#properties" class="btn btn-primary py-3 px-4"
                   >Search Properties</a
                 >
               </p>
