@@ -259,6 +259,7 @@
               $gallery = $property['gallery'] ? json_decode($property['gallery']) : [];
               $sales_cost = $property['sales_cost'];
               $rental_cost = $property['rental_cost'];
+              $ROI = $property['ROI'];
 
               $images = [];
 
@@ -276,7 +277,7 @@
                       <?php
                         if ($type === 'Sale') {
                           ?>
-                            <div class="ribbon ribbon-top-right"><span>8.3% ROI</span></div>
+                            <div class="ribbon ribbon-top-right"><span><?=$ROI;?>% ROI</span></div>
                           <?php
                         }
                       ?>
