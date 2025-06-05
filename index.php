@@ -275,7 +275,7 @@
                       style="background-image: url(<?=$photo;?>)"
                     >
                       <?php
-                        if ($type === 'Sale') {
+                        if ($ROI) {
                           ?>
                             <div class="ribbon ribbon-top-right"><span><?=$ROI;?>% ROI</span></div>
                           <?php
