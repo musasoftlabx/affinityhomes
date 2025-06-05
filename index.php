@@ -277,7 +277,7 @@
                       <?php
                         if ($ROI) {
                           ?>
-                            <div class="ribbon ribbon-top-right"><span><?=$ROI;?>% ROI</span></div>
+                            <div class="ribbon ribbon-top-right"><span><?=number_format($ROI, 1);?>% ROI</span></div>
                           <?php
                         }
                       ?>
