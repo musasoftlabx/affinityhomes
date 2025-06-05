@@ -276,7 +276,7 @@
                       <?php
                         if ($type === 'Sale') {
                           ?>
-                            <div class="ribbon ribbon-top-right"><span>ON SALE</span></div>
+                            <div class="ribbon ribbon-top-right"><span>8.3% ROI</span></div>
                           <?php
                         }
                       ?>
