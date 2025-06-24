@@ -39,7 +39,7 @@
 
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/icomoon.css" />
-    <link rel="stylesheet" href="css/styles-5.css" />
+    <link rel="stylesheet" href="css/styles-5.css?tag=<?php time();?>" />
 
     <link rel="stylesheet" href="css/glightbox.min.css" />
   </head>
@@ -327,12 +327,20 @@
                     </div>  
 
                     <div class="text">
-                      <div class="btn btn-primary px-2 mb-3" style="border: 5px double #fff !important; border-radius: 10px">For <?=$type;?></div>
+                      <div class="mb-3" style="display: flex">
+                        <div class="btn btn-primary px-2" style="border: 5px double #fff !important; border-radius: 10px">For <?=$type;?></div>
+
+                        <div style="flex: 1"></div>
+
+                        <span class="align-content-center justify-content-end">
+                          <a href="https://www.booking.com" target="_blank"><img src="images/booking.png" class="external-links" alt="booking" title="Booking.com" /></a>
+                          <a href="https://euro.expedia.net" target="_blank"><img src="images/expedia.png" class="external-links" alt="expedia" title="Expedia" style="width: 29px; height: 29px; margin: 0 10px" /></a>
+                          <a href="https://www.airbnb.com" target="_blank"><img src="images/airbnb.png" class="external-links" alt="airbnb" title="Airbnb" style="width: 25px; height: 25px" /></a>
+                        </span>
+                      </div>
 
                       <h3 class="mb-0">
-                        <a href="#properties"
-                          ><?=$title;?></a
-                        >
+                        <a href="#properties"><?=$title;?></a>
                       </h3>
 
                       <p class="price mb-2 mt-2">
