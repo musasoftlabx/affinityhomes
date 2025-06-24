@@ -13373,10 +13373,12 @@ textarea.form-control {
 .external-links {
   height: 30px;
   width: 30px;
+  opacity: 0.7;
 }
 
 .external-links:hover {
   cursor: pointer;
+  opacity: 1;
 }
 
 /* Tooltip container */
