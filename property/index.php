@@ -267,6 +267,10 @@
 				</div>
       </div>
     </section>
+
+	<iframe src="https://airbnb.com/h/1bdrlisting" title="Furnished 2 bd" width="1000" height="700">
+
+	</iframe>
 		
 
     <footer class="ftco-footer ftco-section">
