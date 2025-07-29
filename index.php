@@ -336,9 +336,29 @@
                         <div style="flex: 1"></div>
 
                         <span class="align-content-center justify-content-end">
-                          <a href="<?=$airbnb_uri;?>" target="_blank"><img src="images/airbnb.png" class="external-links" alt="airbnb" title="Airbnb" style="width: 25px; height: 25px" /></a>
-                          <a href="https://www.booking.com" target="_blank"><img src="images/booking.png" class="external-links" alt="booking" title="Booking.com" /></a>
-                          <!-- <a href="https://euro.expedia.net" target="_blank"><img src="images/expedia.png" class="external-links" alt="expedia" title="Expedia" style="width: 29px; height: 29px; margin: 0 10px" /></a> -->
+                          <?php 
+                            if ($airbnb_uri) {
+                              ?>
+                                <a href="<?=$airbnb_uri;?>" target="_blank"><img src="images/airbnb.png" class="external-links" alt="airbnb" title="Airbnb" style="width: 25px; height: 25px" /></a>
+                              <?php
+                            }
+                          ?>
+
+                          <?php 
+                            if ($booking_uri) {
+                              ?>
+                                <a href="https://www.booking.com" target="_blank"><img src="images/booking.png" class="external-links" alt="booking" title="Booking.com" /></a>
+                              <?php
+                            }
+                          ?>
+
+                          <?php 
+                            if ($expedia_uri) {
+                              ?>
+                                <a href="https://euro.expedia.net" target="_blank"><img src="images/expedia.png" class="external-links" alt="expedia" title="Expedia" style="width: 29px; height: 29px; margin: 0 10px" /></a>
+                              <?php
+                            }
+                          ?>
                         </span>
                       </div>
 
