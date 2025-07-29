@@ -1,28 +1,23 @@
 <?php
-require '../functions.php';
+require './functions.php';
 header('Content-Type: application/json');
 
 $_JSON = json_decode(file_get_contents('php://input'), true);
 
-$username = TokenDeconstruct($token, 'username');
-
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    if (isset($_GET['query'])) {
-        $query = strtolower($_GET['query']);
-        echo json_encode(ChainPDO("SELECT id, code, name, country, client FROM stores WHERE name REGEXP ? ORDER BY id DESC", [$query])->fetchAll());
-        die();
-    }
+    // if (isset($_GET['query'])) {
+    //     $query = strtolower($_GET['query']);
+    //     echo json_encode(ChainPDO("SELECT id, code, name, country, client FROM stores WHERE name REGEXP ? ORDER BY id DESC", [$query])->fetchAll());
+    //     die();
+    // }
 
-    $dataset = ChainPDO("SELECT id, code, name, country, client, modifiedBy, modifiedOn FROM stores ORDER BY id DESC")->fetchAll();
+    // $dataset = ChainPDO("SELECT id, code, name, country, client, modifiedBy, modifiedOn FROM stores ORDER BY id DESC")->fetchAll();
 
-    foreach ($dataset as $key => $data) {
-        $dataset[$key]['modifiedOn'] = date('D, jS \of M Y \a\t H:i:s a', strtotime($data['modifiedOn']));
-    }
+    // foreach ($dataset as $key => $data) {
+    //     $dataset[$key]['modifiedOn'] = date('D, jS \of M Y \a\t H:i:s a', strtotime($data['modifiedOn']));
+    // }
 
-    echo json_encode([
-        'workingStore' => ChainPDO("SELECT workingStore, workingDate, scanCharsLimit, `strict` FROM defaults")->fetch(),
-        'stores' => $dataset
-    ]);
+    echo json_encode(ChainPDO("SELECT * FROM properties WHERE visible = 1 ORDER BY priority")->fetchAll());
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

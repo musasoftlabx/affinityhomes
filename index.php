@@ -260,6 +260,9 @@
               $sales_cost = $property['sales_cost'];
               $rental_cost = $property['rental_cost'];
               $ROI = $property['ROI'];
+              $airbnb_uri = $property['airbnb_uri'];
+              $booking_uri = $property['booking_uri'];
+              $expedia_uri = $property['expedia_uri'];
 
               $images = [];
 
@@ -333,9 +336,9 @@
                         <div style="flex: 1"></div>
 
                         <span class="align-content-center justify-content-end">
+                          <a href="<?=$airbnb_uri;?>" target="_blank"><img src="images/airbnb.png" class="external-links" alt="airbnb" title="Airbnb" style="width: 25px; height: 25px" /></a>
                           <a href="https://www.booking.com" target="_blank"><img src="images/booking.png" class="external-links" alt="booking" title="Booking.com" /></a>
-                          <a href="https://euro.expedia.net" target="_blank"><img src="images/expedia.png" class="external-links" alt="expedia" title="Expedia" style="width: 29px; height: 29px; margin: 0 10px" /></a>
-                          <a href="https://www.airbnb.com" target="_blank"><img src="images/airbnb.png" class="external-links" alt="airbnb" title="Airbnb" style="width: 25px; height: 25px" /></a>
+                          <!-- <a href="https://euro.expedia.net" target="_blank"><img src="images/expedia.png" class="external-links" alt="expedia" title="Expedia" style="width: 29px; height: 29px; margin: 0 10px" /></a> -->
                         </span>
                       </div>
 
@@ -397,7 +400,7 @@
                         <div style="flex: 1"></div>
 
                         <div class="align-content-center justify-content-end">
-                          <a href="#contact" class="btn btn-primary py-2 px-3" style="border-radius: 10px; background: transparent !important; color: #b07032 !important">Enquire <span class="fa fa-external-link"></span></a>
+                          <a href="property/?<?=$title;?>" class="btn btn-primary py-2 px-3" style="border-radius: 10px; background: transparent !important; color: #b07032 !important">Details <span class="fa fa-external-link"></span></a>
                         </div>
                       </div>
 
