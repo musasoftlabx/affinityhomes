@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Affinity Homes</title>
+    <title>Affinity Homes Kenya</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -347,7 +347,7 @@
                           <?php 
                             if ($booking_uri) {
                               ?>
-                                <a href="https://www.booking.com" target="_blank"><img src="images/booking.png" class="external-links" alt="booking" title="Booking.com" /></a>
+                                <a href="<?=$booking_uri;?>" target="_blank"><img src="images/booking.png" class="external-links" alt="booking" title="Booking.com" /></a>
                               <?php
                             }
                           ?>
@@ -355,7 +355,7 @@
                           <?php 
                             if ($expedia_uri) {
                               ?>
-                                <a href="https://euro.expedia.net" target="_blank"><img src="images/expedia.png" class="external-links" alt="expedia" title="Expedia" style="width: 29px; height: 29px; margin: 0 10px" /></a>
+                                <a href="<?=$expedia_uri;?>" target="_blank"><img src="images/expedia.png" class="external-links" alt="expedia" title="Expedia" style="width: 29px; height: 29px; margin: 0 10px" /></a>
                               <?php
                             }
                           ?>
@@ -1349,6 +1349,15 @@
         lightbox.setElements(elements);
         lightbox.openAt(slide ?? 0);
       }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17098665699"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-17098665699');
     </script>
   </body>
 </html>
